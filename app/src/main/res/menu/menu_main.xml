@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/firstFragment"
+        android:icon="@drawable/shouye"
+        android:title="首页" />
+    <item
+        android:id="@+id/secondFragment"
+        android:icon="@drawable/faxian"
+        android:title="树洞" />
+    <item
+        android:id="@+id/thirdFragment"
+        android:icon="@drawable/wode"
+        android:title="我的" />
+</menu>

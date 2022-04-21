@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation_main_menu"
+    app:startDestination="@id/firstFragment">
+    <fragment
+        android:id="@+id/firstFragment"
+        android:name="com.example.shudong10.first.FisrstFragment"
+        android:label="fragment_fisrst"
+        tools:layout="@layout/fragment_first" >
+        <action
+            android:id="@+id/action_firstFragment_to_findFragment"
+            app:destination="@id/findFragment" />
+        <action
+            android:id="@+id/action_firstFragment_to_biaobaiqiangFragment"
+            app:destination="@id/biaobaiqiangFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/secondFragment"
+        android:name="com.example.shudong10.second.SecondFragment"
+        android:label="fragment_second"
+        tools:layout="@layout/fragment_second" >
+        <action
+            android:id="@+id/action_secondFragment_to_dialogsFragment"
+            app:destination="@id/dialogsFragment" />
+        <action
+            android:id="@+id/action_secondFragment_to_messageListFragment"
+            app:destination="@id/messageListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/thirdFragment"
+        android:name="com.example.shudong10.third.ThirdFragment"
+        android:label="fragment_third"
+        tools:layout="@layout/fragment_third" />
+    <fragment
+        android:id="@+id/findFragment"
+        android:name="com.example.shudong10.first.FindFragment"
+        android:label="find_fragment"
+        tools:layout="@layout/find_fragment" >
+        <action
+            android:id="@+id/action_findFragment_to_myQuestionFragment"
+            app:destination="@id/myQuestionFragment" />
+        <action
+            android:id="@+id/action_findFragment_to_firstFragment"
+            app:destination="@id/firstFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/myQuestionFragment"
+        android:name="com.example.shudong10.first.MyQuestionFragment"
+        android:label="my_question_fragment"
+        tools:layout="@layout/my_question_fragment" >
+        <action
+            android:id="@+id/action_myQuestionFragment_to_findFragment"
+            app:destination="@id/findFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/dialogsFragment"
+        android:name="com.example.shudong10.second.DialogsFragment"
+        android:label="fragment_dialogs"
+        tools:layout="@layout/fragment_dialogs" >
+        <action
+            android:id="@+id/action_dialogsFragment_to_secondFragment"
+            app:destination="@id/secondFragment" />
+        <action
+            android:id="@+id/action_dialogsFragment_to_messageListFragment"
+            app:destination="@id/messageListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/messageListFragment"
+        android:name="com.example.shudong10.second.MessageListFragment"
+        android:label="fragment_message_list"
+        tools:layout="@layout/fragment_message_list" >
+        <action
+            android:id="@+id/action_messageListFragment_to_dialogsFragment"
+            app:destination="@id/dialogsFragment" />
+        <argument
+            android:name="Dialog"
+            app:argType="reference" />
+    </fragment>
+    <fragment
+        android:id="@+id/biaobaiqiangFragment"
+        android:name="com.example.shudong10.first.BiaobaiqiangFragment"
+        android:label="fragment_biaobaiqiang"
+        tools:layout="@layout/fragment_biaobaiqiang" >
+        <action
+            android:id="@+id/action_biaobaiqiangFragment_to_firstFragment"
+            app:destination="@id/firstFragment" />
+    </fragment>
+</navigation>
